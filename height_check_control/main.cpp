@@ -13,23 +13,24 @@
 
 typedef boost::tuple<std::string,double,double,double> check_point_3;
 
-typedef std::vector<check_point_3> container_type;
+typedef std::vector<check_point_3> container_type1;
+typedef std::vector<std::string> container_type2;
 
 int main( int argc, char* argv[] )
 {
   std::string check_points_fname( argv[1] );
   std::string dtm_set_fname( argv[2] );
 
-  boost::shared_ptr<container_type> check_points(
-    utility::algorithm::load<container_type>( check_points_fname )
+  boost::shared_ptr<container_type1> check_points(
+    utility::algorithm::load<container_type1>( check_points_fname )
   );
 
-  boost::shared_ptr<container_type> dtm_files(
-    utility::algorithm::load<container_type>( dtm_set_fname )
+  boost::shared_ptr<container_type2> dtm_files(
+    utility::algorithm::load<container_type2>( dtm_set_fname )
   );
 
-  container_type::const_iterator p_it;
-  container_type::const_iterator p_end = check_points->end();
+  container_type1::const_iterator p_it;
+  container_type1::const_iterator p_end = check_points->end();
 
   for( std::vector<std::string>::const_iterator it = dtm_files->begin();
     it != dtm_files->end(); ++it ) {
