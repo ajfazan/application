@@ -1,0 +1,6 @@
+CMakeCache.txt
+*.cmake
+Makefile
+CMakeFiles
+dem_diff*
+height_check_control*
