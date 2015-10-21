@@ -2,5 +2,6 @@ CMakeCache.txt
 *.cmake
 Makefile
 CMakeFiles
+install_manifest*
 dem_diff*
 height_check_control*
