@@ -10,6 +10,9 @@
 
 int main( int argc, char* argv[] )
 {
+        std::cout << argc << std::endl;
+
+
   canvas::image::pixel_type type(
     canvas::image::get_pixel_type( argv[1] )
   );
@@ -27,6 +30,8 @@ int main( int argc, char* argv[] )
 
       std::vector<boost::uint8_t> values;
       values.reserve( band_count );
+
+      std::cout << argc << std::endl;
 
       do {
 
